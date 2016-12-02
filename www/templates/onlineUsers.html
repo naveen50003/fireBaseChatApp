@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-nav-title>
+    <span style="background-color:#387ef5;color:#fff;display:block;">Online Users</span>
+  </ion-nav-title>
+
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item class="item item-avatar" ng-repeat="stat in status" type="item-text-wrap" href="#/chat/users/{{stat.connections.id}}"
+                  ng-if="(!stat.connections.ended||(stat.connections.ended < stat.connections.begin)) && (stat.connections.name !== loginUserName)">
+          <img ng-src="{{stat.connections.picUrl}}">
+          <a style="top:34%;position:absolute;cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">
+            {{stat.connections.name}}
+          </a>
+          <span class="badge badge-assertive" ng-repeat="note in notify" ng-if="(note.$id === user.name)">{{note.count}}</span>
+                <!-- <span class="badge badge-assertive">0</span> -->
+        </ion-item>
+      </ion-list>
+    </ion-content>
+      <!-- <ion-item ng-repeat="user in users" type="item-text-wrap" href="#/chat/users/{{user.UID}}" ng-if="user.name !== loginUserName">
+        <a>
+
+            {{user.name}}
+
+            <span class="badge badge-assertive"></span>
+        </a>
+              <span class="badge badge-assertive">0</span>
+      </ion-item>
+    </ion-list> -->
+
+  </ion-view>

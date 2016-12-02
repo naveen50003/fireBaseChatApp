@@ -1,0 +1,27 @@
+<ion-view view-title="SignUp">
+	<ion-content class="card signed-in-bar">
+		<form name="form">
+				<label class="item item-input item-floating-label">
+					<input type="text" placeholder="UserName" ng-model="register.user" required>
+				</label>
+				<label class="item item-input item-floating-label">
+					<input type="password" placeholder="PassWord" ng-model="register.pass" required>
+				</label>
+				<label class="item item-input item-floating-label">
+					<input type="text" placeholder="Name" ng-model="register.displayName">
+				</label>
+				<label class="item item-input item-floating-label">
+					<!-- <a class="button button-icon icon ion-paperclip" style="pointer:cursor;"></a> -->
+					<input type="file" name="picName" id="upload-photo" ng-model="uploadPicName" onchange="angular.element(this).scope().fileNameChanged(this)" valid-file
+									ng-required="isUpload">
+					<progress value="0" max="100" id="uploader">0%</progress>
+				</label>
+				<button class="button button-block button-positive" ng-click="signUp()" ng-disabled=" !form.$valid">
+					Sign Up
+				</button>
+				<button class="button button-block button-positive"  ng-click="signInBack()">
+					Login
+				</button>
+			</form>
+	</ion-content>
+</ion-view>

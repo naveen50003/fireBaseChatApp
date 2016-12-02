@@ -1,0 +1,20 @@
+<ion-view title="">
+  <ion-content class="padding has-header">
+      <div class="bar bar-header bar-positive">
+    <!-- <button class="button icon ion-navicon"></button> -->
+        <h1 class="title">{{friend.name}}</h1>
+        <button class="button button-icon ion-chatboxes" ng-click="showModal()"></button>
+      </div>
+      <!-- <label class="calm" style="display:inline-block;text-align:center;font-weight:bold;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Welcome :
+        <span style="text-transform:capitalize;text-align:center">{{friend.name}}</span></label>
+      <!<button title="logout" class="button button-icon ion-power" ng-click="logout()">
+      </button>-->
+      <div style="padding-top:50px">
+  			<div class="" ng-repeat="message in perUsrMsg" style="margin-left:15px">
+  				<p style="font-weight:normal;font-family: 'Comic Sans MS', 'Comic Sans', cursive;" ng-class="loginUserName === message.from ? 'balanced' : 'dark'">
+              {{message.from}} : <span style:"color:#000;"> {{message.message}}</span>
+        	</p>
+  			</div>
+  		</div>
+  </ion-content>
+</ion-view>

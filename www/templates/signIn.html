@@ -1,0 +1,33 @@
+<ion-view view-title="Ionic Chat App" class="royal">
+<ion-view view-title="SignIn">
+
+	<ion-content class="list">
+		<form name="loginform">
+		<!--<div class="bar bar-header">
+	        <h1 class="title">Ionic Chat App</h1>
+	    </div>-->
+		 <!-- <h2 class="royal" style="text-align:center;font-size:20">Ionic Chat App</h2> -->
+				<label class="item item-input item-floating-label">
+					<span class="input-label">UserName</span>
+					<input type="text" placeholder="UserName" ng-model="login.user" required>
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">PassWord</span>
+					<input type="password" placeholder="PassWord" ng-model="login.pass" required>
+				</label>
+				<button class="button button-block button-positive"  ng-click="signIn(login)" ng-disabled="!loginform.$valid">
+					Sign In
+				</button>
+				<button class="button button-block button-positive"  ng-click="registerClick()">
+					Register
+				</button>
+				<button class="button button-block sign-in" ng-click="authWithFb()">
+			            <span class="button-icon ion-social-facebook"></span>Sign in with Facebook
+				</button>
+			</form>
+		<!--<ion-toggle ng-model="data.isLoading">Toggle me to toggle loading!</ion-toggle>-->
+	</ion-content>
+	<ion-footer-bar align-title="left" class="bar-assertive" ng-if="errorMsg.value">
+      {{errorMsg.value}}
+    </ion-footer-bar>
+</ion-view>

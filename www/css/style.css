@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+#upload-photo{
+  1opacity:0;
+  1position:absolute;
+  1z-index:10;
+}
+#uploader{
+  -webkit-appearance:none;
+  appearance:none;
+  width:50%;
+  margin-bottom:10px;
+
+}
+#msg-button{
+
+      float:right;
+      background-color:#fff;
+      min-height:47px;
+}

@@ -1,0 +1,35 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-secondary">
+		<h1 class="title">Change Profile</h1>
+		<button class="button button-icon ion-android-close" ng-click="closeProfileModal()"></button>
+	</ion-header-bar>
+	<ion-content>
+		<form name="msgForm" ng-submit="addMessage(message)">
+			<div class="list">
+				<!--<label class="item item-input">
+				<input type="text" placeholder="Name" ng-model="message.name">
+				</label>-->
+        <form name="form">
+    				<label class="item item-input item-floating-label">
+    					<input type="text" placeholder="UserName" ng-model="register.user" required>
+    				</label>
+    				<label class="item item-input item-floating-label">
+    					<input type="password" placeholder="PassWord" ng-model="register.pass" required>
+    				</label>
+    				<label class="item item-input item-floating-label">
+    					<input type="text" placeholder="Name" ng-model="register.displayName">
+    				</label>
+    				<label class="item item-input item-floating-label">
+    					<!-- <a class="button button-icon icon ion-paperclip" style="pointer:cursor;"></a> -->
+    					<input type="file" name="picName" id="upload-photo" ng-model="uploadPicName" onchange="angular.element(this).scope().fileNameChanged(this)"
+    									ng-required="isUpload">
+    					<progress value="0" max="100" id="uploader">0%</progress>
+    				</label>
+    				<button class="button button-block button-positive" ng-click="modifyUserDetails(register)">
+    					Modify
+    				</button>
+    			</form>
+			</div>
+		</form>
+	</ion-content>
+</ion-modal-view>

@@ -1,0 +1,28 @@
+<ion-tabs class="tabs-icon-top">
+
+
+  <!-- Pets Tab -->
+  <!-- <ion-nav-view></ion-nav-view> -->
+  <ion-tab title="GroupChat" icon="icon ion-home" ui-sref="#/chat/groupchat">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Adopt Tab -->
+  <ion-tab title="Register Friends" icon="icon ion-person-stalker" href="#/chat/users">
+    <ion-nav-view name="tab-register"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Online Friends" icon="icon ion-person-stalker" href="#/chat/online">
+    <ion-nav-view name="tab-online"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Update Profile" icon="icon ion-edit" ng-if="!FBUser" href="#/chat/{{uid}}">
+    <ion-nav-view name="tab-profile"></ion-nav-view>
+  </ion-tab>
+  <!-- About Tab -->
+  <ion-tab title="Logout" icon="icon ion-power" ng-click="logout()">
+    <!--<ion-nav-view name="tab-account"></ion-nav-view>-->
+  </ion-tab>
+
+
+</ion-tabs>

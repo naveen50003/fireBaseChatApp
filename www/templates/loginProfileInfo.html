@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-nav-title>
+    <span style="background-color:#387ef5;color:#fff;display:block;">Update Profile</span>
+  </ion-nav-title>
+  <ion-content class="has-header">
+    <ion-list>
+        <ion-item class="item item-avatar">
+            <img ng-src="{{friend.picUrl}}">
+            <h2>{{friend.name}}</h2>
+            <p>{{friend.username}}</p>
+        </ion-item>
+        <ion-item class="item item-body">
+          <img class="full-image" ng-src="{{friend.picUrl}}">
+          <p>
+            <b>Name:</b> {{friend.name}}
+          </p>
+          <p>
+            <b>UserName:</b> {{friend.username}}
+          </p>
+          <p>
+            <button class="subdued button button-small button-positive"  ng-click="showProfileModal()">
+               Change Profile
+            </button>
+          </p>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

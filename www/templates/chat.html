@@ -1,0 +1,101 @@
+<!--<ion-tabs class="tabs-positive tabs-icon-top">
+
+  <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+    
+  </ion-tab>
+
+  <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+    
+  </ion-tab>
+
+  <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+    
+  </ion-tab>
+
+</ion-tabs>-->
+
+<!--
+  <span class="item item-text-wrap" style="text-align:center;">
+        Welcome hii<span style="text-transform:capitalize">{{loggedUser}}</span>
+  </span>
+  <div class="item item-button-right">
+    <button class="button button-outline button-right button-assertive button-small">
+          logout
+    </button>
+  </div>
+  
+
+  ...
+
+</div>-->
+
+
+<!--<div>
+  <div class="item item-button-right" ng-if="!faceloggedUser">
+    <label>Welcome : <span style="text-transform:capitalize;text-align:center">{{loggedUser}}</span></label>
+    <button class="button button-outline button-assertive button-small" ng-click="logout()">
+      logout
+    </button>
+  </div>
+  <div class="item item-button-right" ng-if="faceloggedUser">
+      <a class="item item-avatar" href="#">
+        <img ng-src="{{picUrl}}">
+        <h2>Welcome : {{faceloggedUser}}</h2>
+        <button class="button button-outline button-assertive button-small" ng-click="logout()">
+        logout
+        </button>
+      </a>
+  </div>
+  <div>
+    <div class="list">
+      <div class="item item-text-wrap" ng-repeat="message in messages" style="">
+        <span style="font-weight:bold">{{message.username}}</span>:{{message.message}}
+      </div>
+    </div>
+    <div class="item item-input-inset">
+      
+    </div>
+  </div>
+ </div>-->
+<div class="card">
+  <div class="item item-button-right" ng-if="faceloggedUser">
+      <a class="item item-avatar" href="#">
+        <img ng-src="{{picUrl}}">
+        <h2>Welcome : {{faceloggedUser}}</h2>
+        <!--<p>Back off, man. I'm a scientist.</p>-->
+        <button class="button button-assertive button-small" ng-click="logout()">
+        logout
+        </button>
+      </a>
+  </div>
+  <div class="item item-button-right" ng-if="!faceloggedUser">
+     <label class="balanced" style="display:block;text-align:center;color:">Welcome : <span style="text-transform:capitalize;text-align:center">{{loggedUser}}</span></label>
+      <button class="button button-assertive button-small" ng-click="logout()">
+        logout
+      </button>
+      <!--<ul class="list">
+        <li class="item item-toggle">
+            HTML5
+            <label class="toggle toggle-assertive">
+              <input type="checkbox">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+      </ul>-->
+  </div>
+  <div class="item item-text-wrap">
+    <div class="" ng-repeat="message in messages| orderBy:'-time'" style="">
+        <span style="font-weight:bold" ng-class="(loggedUser === message.username) ? 'balanced' : 'calm'">{{message.username}}</span>:{{message.message}}
+    </div>
+  </div>
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+       <input type="text" placeholder="Enter Messsage" ng-model="chat.chatMsg">
+    </label>
+    <button class="button button-small button-positive" ng-click="sendMsg()">
+        Send Message
+    </button>
+  </div>
+</div>

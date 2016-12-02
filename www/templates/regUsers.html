@@ -1,0 +1,59 @@
+<ion-view>
+    <ion-nav-title>
+      <span style="background-color:#387ef5;color:#fff;display:block;">Register Users</span>
+    </ion-nav-title>
+
+  <!-- <ion-content class="" style="height:250px"> -->
+
+    <!-- <div class="item item-divider calm">
+       Online Users
+    </div>
+     <ion-scroll direction="y" style="height: 250px">
+        <a class="item balanced" ng-repeat="stat in status"
+            ng-if="(!stat.connections.ended||(stat.connections.ended < stat.connections.begin)) && (stat.connections.name !== loginUserName)">
+            <p class="" style="cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">{{stat.connections.name}}</p>
+
+        </a>
+     </ion-scroll> -->
+    <!-- <ion-scroll direction="y" class="available-scroller">
+
+      <a class="item balanced" collection-repeat="user in users" item-height="250" href="#/chat/users/{{user.UID}}">
+          <p class="" style="cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">{{user.name}}</p>
+
+      </a>
+
+    </ion-scroll> -->
+    <!-- <ion-view title="Friends"> -->
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item item-avatar" ng-repeat="user in users" type="item-text-wrap" href="#/chat/users/userProile/{{user.UID}}" ng-if="user.name !== loginUserName">
+        <img ng-src="{{user.picUrl}}">
+        <a style="top:34%;position:absolute;cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">
+          {{user.name}}
+        </a>
+          <span class="badge badge-assertive" ng-repeat="note in notify" ng-if="(note.$id === user.name)">{{note.count}}</span>
+              <!-- <span class="badge badge-assertive">0</span> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+    <!-- <ion-scroll direction="y" class="available-scroller"> -->
+        <!-- <a class="item" ng-repeat="(key,value) in users">
+            <p class="" style="color:FFA500;font-weight:bold" ng-repeat="(key,value) in value">{{value.name}}</p>
+        </a> -->
+        <!-- <a class="item" ng-repeat="user in users" item-height="500">
+            <p class="" style="color:FFA500;font-weight:bold;cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">{{user.name}}</p>
+        </a> -->
+        <!-- <ion-list>
+          <ion-item collection-repeat="user in users" type="item-text-wrap" style="color:FFA500;font-weight:bold;cursor:pointer;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">
+            {{user.name}}
+          </ion-item>
+        </ion-list> -->
+    <!-- </ion-scroll> -->
+    <!-- <ion-list>
+      <ion-item ng-repeat="user in users" type="item-text-wrap">
+        {{user.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view> -->
